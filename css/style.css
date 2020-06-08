@@ -8,31 +8,181 @@ Zwart: #000
 */
 
 
-html, body {
-margin: 0;
-padding: 0;
+/*main css styling*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/bg/bg6.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #fff;
+    font-family: catseye, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 body {
-height: 100vh;}
+    height: 100vh;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*Header voor account setup*/
+
+header.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 40px;
+    width: 100vw;
+}
+
+header.top h4 {
+    font-size: 20px;
+}
+
+
+/*Styling voor login page*/
 
 #page_login {
-margin: 0 auto;
+    margin: 0 auto;
 }
 
 #page_login div {
-display: flex;
-justify-content: space-around;
-flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     height: calc(100%/3);
-    border: 1px solid #000;
 }
 
 #page_login .logo_image {}
 
-.login_types{}
-.login{}
-.login_FB .login_GL .login_EM {}
-.forgotten_password{}
+.login_types .login-title {
+    font-size: 3em;
+    margin: 0;
+}
 
+.login_types a {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    border: 2px solid #fff;
+    padding: 5px 0 5px 50px;
+    border-radius: 15px;
+    text-align: left;
+    width: 85vw;
+    white-space: nowrap;
+}
+
+.login_types p i {
+    font-size: 1em;
+}
+
+.login {}
+
+.login_FB {
+    background-color: #3b5998;
+}
+
+.login_FB::before,
+.login_GL::before,
+.login_EM::before {
+    position: absolute;
+    left: 12%;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    /*dit is alleen om te laten zien waar de before komt te staan*/
+}
+
+.login_FB::before {
+    content: ''/*hier komt facebook icon*/
+    ;
+}
+
+.login_GL::before {
+    content: ''/*hier komt google icon*/
+    ;
+}
+
+.login_EM::before {
+    content: ''/*hier komt email icon*/
+    ;
+}
+
+.login_GL {
+    background-color: #D44638;
+}
+
+.login_EM {
+    background-color: #cfe550;
+}
+
+.password_forgot {
+    justify-content: center!important;
+}
+
+.password_forgot a {
+    text-decoration: underline;
+    margin: 1em 0;
+    font-size: 1.2em;
+}
+
+
+/*styling voor account setup*/
+
+#setup_page1 form {
+    text-align: center;
+    height: 50vh;
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#setup_page1 ::placeholder {
+color: #fff;
+}
+
+#setup_page1 form label {
+    font-family: /*insert catseye font here*/  ;
+    font-size: 1.5em;
+}
+
+#setup_page1 form input {
+    border: 2px solid #fff;
+    padding: 5px 0 5px 50px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #cfe550;
+}
+
+.goToNextPage {
+    text-align: center;
+     width: 40vw;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10%;
+}
+ .goToNextPage a {
+    font-size: 1.5em;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #cfe550;
+    padding: 5px 50px;
+    border-radius: 10px;   
+}
