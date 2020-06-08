@@ -5,6 +5,9 @@ groen: #0CA789
 blauw: #04AEBD
 rood/oranje: #F24726
 Zwart: #000
+
+groen: #cfe550
+paars: #322244
 */
 
 
@@ -26,6 +29,7 @@ body {
     font-family: catseye, sans-serif;
     font-style: normal;
     font-weight: 400;
+    text-align: center;
 }
 
 body {
@@ -50,6 +54,32 @@ header.top {
 
 header.top h4 {
     font-size: 20px;
+}
+
+/*titel bij setup account onder de kop create account*/
+.Setup_title {
+font-size: 1.5em
+}
+
+/*Bolletjes onderaan de pagina*/
+#progress {
+    display: flex;
+    flex-direction: row;
+     position: absolute;
+     bottom: 4%;
+}
+
+#progress span {
+    background-color: white;
+    border: 5px solid black;
+    padding: 15px;
+    width: 5px;
+    border-radius: 50px;
+    margin: 0 40px;  
+}
+
+#progress span.current {
+    background-color: #cfe550;
 }
 
 
@@ -83,13 +113,12 @@ header.top h4 {
     text-align: left;
     width: 85vw;
     white-space: nowrap;
+    margin: 10px 0;
 }
 
 .login_types p i {
     font-size: 1em;
 }
-
-.login {}
 
 .login_FB {
     background-color: #3b5998;
@@ -100,25 +129,18 @@ header.top h4 {
 .login_EM::before {
     position: absolute;
     left: 12%;
-    width: 25px;
-    height: 25px;
-    background-color: red;
-    /*dit is alleen om te laten zien waar de before komt te staan*/
 }
 
 .login_FB::before {
-    content: ''/*hier komt facebook icon*/
-    ;
+    content: url(../img/icons/facebook-24.png);
 }
 
 .login_GL::before {
-    content: ''/*hier komt google icon*/
-    ;
+    content: url(../img/icons/google-plus-24.png);
 }
 
 .login_EM::before {
-    content: ''/*hier komt email icon*/
-    ;
+    content: url(../img/icons/email-24.png);
 }
 
 .login_GL {
@@ -176,7 +198,7 @@ color: #fff;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    bottom: 10%;
+    bottom: 15%;
 }
  .goToNextPage a {
     font-size: 1.5em;
@@ -186,3 +208,167 @@ color: #fff;
     padding: 5px 50px;
     border-radius: 10px;   
 }
+
+/*setup pagina 2*/
+#setup_page2 .choseConsole {
+    display: flex;
+}
+#setup_page2 .choseConsole .container{
+/*    position: relative;*/
+    flex: 5;
+    background-color: #cfe550;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#setup_page2 .choseConsole .container img {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px; 
+}
+#setup_page2 .choseConsole .container p {
+font-size: 40px;
+}
+
+#setup_page2 .choseConsole p {
+    flex: 1;
+font-size: 80px;
+
+}
+
+/*setup pagiona 3 */
+
+
+#setup_page3 #searchcontainer {
+    overflow: scroll;
+    height: 35vh;
+    width: 80vw;
+    margin: 0 auto;
+    background-color: #cfe550;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+#setup_page3 #myInput {
+  width: 75vw;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  position: fixed;
+  border-radius: 10px;
+    left: 12%;
+}
+
+#setup_page3 #myUL {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  overflow: scroll;
+  height: 27vh;
+}
+
+#setup_page3 #myUL li a {
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: black;
+  display: flex;
+  margin-bottom: 5px;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+#setup_page3 img {
+    width: 50px;
+    height: 70px;
+}
+
+#setup_page3 p {
+    padding-left: 10px;
+    padding: 10px 0 15px 20px;
+    margin: 0;
+    
+}
+
+#setup_page3 a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#setup_page3 .enter {
+/*
+    margin: 40px 69px 100px;
+    left: 0;
+    position: absolute;
+    font-size: 19pt;
+    padding: 20px 20px;
+    box-shadow: 0 5px 5px 0 rgba(68, 68, 68, 0.6);
+    background-color: white;
+    border: 5px solid #cfe550; 
+*/
+}
+
+#setup_page3 #foo {
+    font-size: 15pt;
+    color: black;
+    margin: 30px;
+    background-color: #cfe550;
+    list-style: none;
+    padding: 10px 30px 10px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    font-family: sans-serif;    
+}
+
+#setup_page3 .enterbutton {
+/*
+    display: flex;
+    justify-content: center;
+*/
+}
+
+#setup_page3 ul {
+    list-style: none;
+}
+
+#setup_page3 li {
+    padding: 5px;
+}
+
+#setup_page3 p#games {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 50pt;
+}
+
+#setup_page3 #clear {
+    padding: 5px 10px;
+    margin: 10px auto;
+    background-color: gainsboro;
+    width: 75vw;
+    border-radius: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+#setup_page3 #myUL li {
+    border-radius: 10px;
+}
+
+.chosen {
+    background-color: #322244;
+    color: white !important;
+    pointer-events: none;
+}
+
+#setup_page3 .goToNextPage {
+width: 70vw;}
