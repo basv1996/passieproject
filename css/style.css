@@ -372,3 +372,46 @@ font-size: 80px;
 
 #setup_page3 .goToNextPage {
 width: 70vw;}
+
+/*Settings page*/
+
+#settings_page #settings {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#settings_page #settings li {
+    padding: 10px 0;
+    border-bottom: 2px solid #cfe550;    
+}
+
+#settings_page #settings li:last-child {
+    border-bottom: 0;
+}
+
+#settings_page #settings a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#settings_page #settings p {
+    font-size: 15pt;
+}
+
+#settings_page #settings:last-child {
+    font-size: 20pt;
+}
+
+#settings_page #settings li a img {
+    height: 50px;
+    margin-top: 8px;
+}
+
+#settings_page .arrowright {
+}

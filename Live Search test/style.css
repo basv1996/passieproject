@@ -171,6 +171,68 @@ p#games {
     font-size: 50pt;
 }
 
+#settings {
+    margin: 20px 30px;
+    padding: 0;
+}
+
+#settings li {
+    padding: 25px 0;
+    border-bottom: 2px solid #cfe550;    
+}
+
+#settings li:last-child {
+    border-bottom: 0;
+}
+
+#settings a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#settings p {
+    color: white;
+    font-family: catseye, sans-serif;
+    font-size: 15pt;
+    padding: 15px 0 15px 20px;
+    text-align: left;
+}
+
+#settings:last-child {
+    font-size: 20pt;
+}
+
+#settings li a img {
+    height: 50px;
+}
+
+.arrowright {
+    text-align: right;
+    margin-right: 0;
+}
+
+h2 {
+    margin-left: 30px;
+    padding: 5px 10px;
+    background-color: gainsboro;
+    width: fit-content;
+    border-radius: 10px;
+    font-family: catseye, sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+#myUL li {
+    border-radius: 10px;
+}
+
+.chosen {
+    background-color: #322244;
+    color: white !important;
+    pointer-events: none;
+
 h2 {
     margin-left: 30px;
     padding: 5px 10px;
