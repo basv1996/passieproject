@@ -19,7 +19,7 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 h3 {
@@ -27,16 +27,15 @@ h3 {
     font-family: sans-serif;
     text-align: center;
     font-weight: 100;
+    margin-top: 120px;
 }
 
 
 h1 {
     color: white;
-    font-family: sans-serif;
-    font-size: 19pt;
+    font-family: catseye, sans-serif;
+    font-size: 23pt;
     margin: 0;
-    margin-top: 5px;
-    margin-left: 50px;
 }
 
 h5 {
@@ -63,7 +62,7 @@ h5.current {
     overflow: scroll;
     height: 35vh;
     width: 80vw;
-    margin: 90px 30px 0;
+    margin: 10px 30px 0;
     background-color: #cfe550;
     border-radius: 10px;
     padding: 10px;
@@ -81,6 +80,7 @@ h5.current {
   margin: 0 px 12px 10px;
   position: fixed;
   border-radius: 10px;
+  font-family: catseye, sans-serif; 
 }
 
 #myUL {
@@ -98,11 +98,11 @@ h5.current {
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: catseye, sans-serif;
   color: black;
   display: flex;
   margin-bottom: 5px;
-    flex-direction: row;
+  flex-direction: row;
   border-radius: 10px;
 }
 
@@ -127,9 +127,11 @@ h4 {
     color: white;
     font-size: 20pt;
     margin: 0;
+    width: 40px;
 }
+
 .enter {
-    margin: 40px 69px 100px;
+    margin: 40px 81px 100px;
     left: 0;
     position: absolute;
     font-size: 19pt;
@@ -137,6 +139,10 @@ h4 {
     box-shadow: 0 5px 5px 0 rgba(68, 68, 68, 0.6);
     background-color: white;
     border: 5px solid #cfe550; 
+}
+
+::placeholder {
+    font-family: catseye, sans-serif;
 }
 
 #foo {
@@ -171,13 +177,55 @@ p#games {
     font-size: 50pt;
 }
 
+#settings {
+    margin: 20px 30px;
+    padding: 0;
+}
+
+#settings li {
+    padding: 25px 0;
+    border-bottom: 2px solid #cfe550;    
+}
+
+#settings li:last-child {
+    border-bottom: 0;
+}
+
+#settings a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#settings p {
+    color: white;
+    font-family: catseye, sans-serif;
+    font-size: 15pt;
+    padding: 15px 0 15px 20px;
+    text-align: left;
+}
+
+#settings:last-child {
+    font-size: 20pt;
+}
+
+#settings li a img {
+    height: 50px;
+}
+
+.arrowright {
+    text-align: right;
+    margin-right: 0;
+}
+
 h2 {
     margin-left: 30px;
     padding: 5px 10px;
     background-color: gainsboro;
     width: fit-content;
     border-radius: 10px;
-    font-family: sans-serif;
+    font-family: catseye, sans-serif;
     cursor: pointer;
     text-align: center;
 }
