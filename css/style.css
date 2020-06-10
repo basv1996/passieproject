@@ -65,17 +65,16 @@ font-size: 1.5em
 #progress {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
      position: absolute;
      bottom: 4%;
 }
 
 #progress span {
     background-color: white;
-    border: 5px solid black;
     padding: 15px;
-    width: 5px;
     border-radius: 50px;
-    margin: 0 40px;  
 }
 
 #progress span.current {
@@ -187,6 +186,7 @@ color: #fff;
     border: 2px solid #fff;
     padding: 5px 0 5px 50px;
     border-radius: 10px;
+    min-width: 90%;
     width: 100%;
     background-color: #cfe550;
 }

@@ -11,8 +11,6 @@ var volgendSchermKnop = document.querySelector('.goToNextPage');
 
 volgendSchermKnop.hidden=true;
 
-
-
 //EventHandlers
 function paginaTerug() {
 window.history.back()
