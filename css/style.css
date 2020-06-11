@@ -161,9 +161,9 @@ font-size: 1.5em
 }
 
 
-/*styling voor account setup*/
+/*styling voor formulieren*/
 
-#setup_page1 form {
+form {
     text-align: center;
     height: 50vh;
     margin: 0 auto;
@@ -173,16 +173,15 @@ font-size: 1.5em
     justify-content: space-around;
 }
 
-#setup_page1 ::placeholder {
+::placeholder {
 color: #fff;
 }
 
-#setup_page1 form label {
-    font-family: /*insert catseye font here*/  ;
+form label {
     font-size: 1.5em;
 }
 
-#setup_page1 form input {
+form div > input, select {
     border: 2px solid #fff;
     padding: 5px 0 5px 50px;
     border-radius: 10px;
@@ -193,7 +192,6 @@ color: #fff;
 
 .goToNextPage {
     text-align: center;
-     width: 40vw;
     margin: 0 auto;
     position: absolute;
     left: 50%;
@@ -228,14 +226,15 @@ color: #fff;
     width: 150px;
     height: 150px; 
 }
-#setup_page2 .choseConsole .container p {
-font-size: 40px;
+#setup_page2 .choseConsole .container #yourConsole {
+    margin: 0;
+    font-size: 40px;
 }
 
-#setup_page2 .choseConsole p {
+#setup_page2 .choseConsole > #previousConsole, #nextConsole {
     flex: 1;
-font-size: 80px;
-
+    font-size: 80px;
+    margin: 20% auto;
 }
 
 /*setup pagiona 3 */
@@ -371,7 +370,134 @@ font-size: 80px;
 }
 
 #setup_page3 .goToNextPage {
-width: 70vw;}
+width: 80vw;}
+
+/*Home pagina na de account set-up*/
+
+#home_page .loader {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#home_page .loader .loading_circle {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 50vw;
+    height: 50vw;
+    border: 20px solid;
+    border-top: 20px solid #cfe550;
+    border-radius: 100%;
+    animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg);}
+}
+/*Bron:
+https://www.w3schools.com/howto/howto_css_loader.asp
+*/
+
+/*Account page*/
+#account_page form {
+    height: unset;
+    text-align: left;
+}
+#account_page form select{
+   width: 100%;
+}
+
+#account_page p {
+    text-align: left;
+    padding-left: 10%;
+}
+
+/*Notification Page*/
+#notification_page ul {
+    width: 80vw;
+     list-style-type: none;
+      padding: 0;
+    margin: 0 auto;;  
+}
+
+#notification_page ul li {
+border-bottom: 2px solid #cfe550; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#notification_page ul li p{
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+#notification_page ul li .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 34px;
+}
+
+#notification_page ul li .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#notification_page ul li .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#notification_page ul li .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#notification_page ul li input:checked + .slider {
+  background-color: #cfe550;
+}
+
+#notification_page ul li input:focus + .slider {
+  box-shadow: 0 0 1px #cfe550;
+}
+
+#notification_page ul li input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*Bron voor de slider:
+https://www.w3schools.com/howto/howto_css_switch.asp
+*/
 
 /*Settings page*/
 
@@ -415,3 +541,28 @@ width: 70vw;}
 
 #settings_page .arrowright {
 }
+
+
+
+
+
+
+/* Media querie for mobiles smaller than 350px (iphone 5 and smaller)*/
+@media only screen and (max-width: 350px) {
+    header.top {
+    padding-top: 0px;
+    }
+    #page_login .login_types a {
+    font-size: 1.25em
+    }
+    #setup_page3 #searchcontainer {  
+    height: 38vh;
+    }
+    
+    #settings_page #settings li {
+    padding: 5px 0;
+    }
+    #settings_page #settings li a img {
+    height: 40px;
+    margin-top: 15px;
+    }
