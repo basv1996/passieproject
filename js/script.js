@@ -2,7 +2,7 @@
 
 
 //Variabelen
-var terugKnop = document.querySelector("#terugknop");
+
 var games = [];
 var liEl = document.querySelectorAll('a');
 var clear = document.querySelector('#clear');
@@ -12,10 +12,6 @@ var volgendSchermKnop = document.querySelector('.goToNextPage');
 volgendSchermKnop.hidden=true;
 
 //EventHandlers
-function paginaTerug() {
-window.history.back()
-}
-
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
