@@ -535,6 +535,78 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     margin-top: 20px;
 }
 
+#friends {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: scroll; 
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    background-color: #2E2440;
+}
+
+#friends li {
+    width: calc(100%/4);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#friends img {
+    width: 50px;
+    margin-bottom: 0;
+}
+
+#fiends p {
+    text-align: center;
+}
+
+#message {
+    margin: 10px 20px;
+    padding: 0;
+    height: 52%;
+    overflow: scroll;
+}
+
+
+.up {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.up p {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#message img {
+    width: 100px;
+    padding: 10px;
+}
+
+#message a {
+    display: flex;
+    flex-direction: row;
+}
+
+#message li {
+    list-style: none;
+    background-color: #A7BE5D;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
 /*Profile Page*/
 
 #profile_tabbar {
