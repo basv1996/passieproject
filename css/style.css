@@ -5,6 +5,7 @@ groen: #0CA789
 blauw: #04AEBD
 rood/oranje: #F24726
 Zwart: #000
+Wit: #fff
 
 groen: #cfe550
 paars: #322244
@@ -78,7 +79,7 @@ font-size: 1.5em
 }
 
 #progress span.current {
-    background-color: #cfe550;
+    background-color: #A7BE5D;
 }
 
 
@@ -187,8 +188,11 @@ form div > input, select {
     border-radius: 10px;
     min-width: 90%;
     width: 100%;
-    background-color: #cfe550;
+    background-color: #A7BE5D;
 }
+
+form input {
+margin-bottom: 5px;}
 
 .goToNextPage {
     text-align: center;
@@ -202,7 +206,7 @@ form div > input, select {
     font-size: 1.5em;
     color: #000;
     background-color: #fff;
-    border: 2px solid #cfe550;
+    border: 2px solid #A7BE5D;
     padding: 5px 50px;
     border-radius: 10px;   
 }
@@ -214,7 +218,7 @@ form div > input, select {
 #setup_page2 .choseConsole .container{
 /*    position: relative;*/
     flex: 5;
-    background-color: #cfe550;
+    background-color: #A7BE5D;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -245,7 +249,7 @@ form div > input, select {
     height: 35vh;
     width: 80vw;
     margin: 0 auto;
-    background-color: #cfe550;
+    background-color: #A7BE5D;
     border-radius: 10px;
     padding: 10px;
 }
@@ -382,6 +386,64 @@ width: 80vw;}
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+#home_page header img {
+    width: 40px;
+    margin: 0;
+}
+
+#home_page header h4 {
+    width: calc(40%/3);
+    margin-top: 20px;
+}
+
+#home_page .container {
+    background-color: #A7BE5D; 
+}
+
+
+
+#home_tabbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;    
+}
+
+#home_tabbar li {
+    width: calc(100%/3);
+    background-color: #A7BE5D;
+    border: 3px solid white;
+    list-style: none;
+}
+
+#home_tabbar li a img{
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+}
+
+#home_tabbar li a p {
+    margin-top: 0;
+    font-size: 12pt;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#home_tabbar li:nth-child(2) {
+    border-left: 0px;
+    border-right: 0px;    
+}
+
+#home_tabbar li:first-child {
+    background-color: #322244;
+    
+}
+
 #home_page .loader .loading_circle {
     position: absolute;
     top: 40%;
@@ -389,7 +451,7 @@ width: 80vw;}
     width: 50vw;
     height: 50vw;
     border: 20px solid;
-    border-top: 20px solid #cfe550;
+    border-top: 20px solid #A7BE5D;
     border-radius: 100%;
     animation: spin 2s linear infinite; 
 }
@@ -401,6 +463,278 @@ width: 80vw;}
 /*Bron:
 https://www.w3schools.com/howto/howto_css_loader.asp
 */
+
+/*Message page*/
+#message_tabbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;    
+}
+
+#message_tabbar li {
+    width: calc(100%/3);
+    background-color: #A7BE5D;
+    border: 3px solid white;
+    list-style: none;
+}
+
+#message_tabbar li a img{
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+}
+
+#message_tabbar li a p {
+    margin-top: 0;
+    font-size: 12pt;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#message_tabbar li:nth-child(2) {
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #322244;
+}
+
+#message_page .loader .loading_circle {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 50vw;
+    height: 50vw;
+    border: 20px solid;
+    border-top: 20px solid #A7BE5D;
+    border-radius: 100%;
+    animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg);}
+}
+
+#message_page .loader {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#message_page header img {
+    width: 40px;
+    margin: 0;
+}
+
+#message_page header h4 {
+    width: calc(40%/3);
+    margin-top: 20px;
+}
+
+/*Profile Page & Home Page*/
+#profile_page main, #home_page main{
+    background-color: #A7BE5D;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+#profile_page .container > div, #home_page .container > div  {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+#home_page .container .container_top_home_page, 
+#profile_page .container .profile_titles {
+    text-align: left;
+    color: #000;
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+#profile_page main .profile_image {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#profile_page main .profile_image .credentitals {
+    text-align: left;
+    width: 30vw;
+    margin-left: 10px;
+}
+
+#profile_page main .bio_text {
+    margin: 0;
+    text-align: left;
+}
+#profile_page main .edit p {
+    color: #322244;
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+#profile_page main .profile_image img {
+width: 100px;
+height: 100px;
+}
+
+#profile_page main .profile_top3 ol img {
+width: 40px;
+height: 40px
+}
+
+#profile_page main > div ol {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+#profile_page main > div ol li {
+    padding-left: 15px;  
+}
+
+/*Home Page*/
+#home_page .container .container_top_home_page, #home_page .container  .decline_approve  {
+    flex-direction: row;
+    justify-content: space-between
+}
+#home_page .container .container_top_home_page img {
+width: 65px;}
+
+#home_page .container .decline_approve img {
+width: 100px;
+}
+
+/*profile edit page*/
+
+#profile_page_edit main {
+margin-top: 15px;
+}
+#profile_page_edit form{
+    text-align: left;
+}
+
+#profile_page_edit form input.bio {
+height: 75px;
+}
+
+#profile_page_edit main .container form .saveProfile {
+    margin: 0 auto;
+     font-size: 1.5em;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #A7BE5D;
+    padding: 5px 50px;
+    border-radius: 10px;
+position: absolute;
+bottom: 10vh;
+  width: 80vw;
+    min-width: unset;
+}
+
+
+
+.goToNextPage {
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 15%;
+}
+
+/*tabbar bottom*/
+
+#profile_tabbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;    
+}
+
+#profile_tabbar li {
+    width: calc(100%/3);
+    background-color: #A7BE5D;
+    border: 3px solid white;
+    list-style: none;
+}
+
+#profile_tabbar li a img{
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+}
+
+#profile_tabbar li a p {
+    margin: 0;
+    font-size: 12pt;
+/*
+    margin-top: 0;
+    margin-bottom: 10px;
+*/
+}
+
+#profile_tabbar li:nth-child(2) {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#profile_tabbar li:last-child {
+    background-color: #322244;
+}
+
+#profile_page .loader .loading_circle {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 50vw;
+    height: 50vw;
+    border: 20px solid;
+    border-top: 20px solid #A7BE5D;
+    border-radius: 100%;
+    animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg);}
+}
+
+#profile_page .loader {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#profile_page header img {
+    width: 40px;
+    margin: 0;
+}
+
+#profile_page header h4 {
+    width: calc(40%/3);
+    margin-top: 20px;
+}
 
 /*Account page*/
 #account_page form {
@@ -416,6 +750,10 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     padding-left: 10%;
 }
 
+#account_page div {
+    padding-top: 5px;
+}
+
 /*Notification Page*/
 #notification_page ul {
     width: 80vw;
@@ -425,7 +763,7 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 }
 
 #notification_page ul li {
-border-bottom: 2px solid #cfe550; 
+border-bottom: 2px solid #A7BE5D; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -473,11 +811,11 @@ border-bottom: 2px solid #cfe550;
 }
 
 #notification_page ul li input:checked + .slider {
-  background-color: #cfe550;
+  background-color: #A7BE5D;
 }
 
 #notification_page ul li input:focus + .slider {
-  box-shadow: 0 0 1px #cfe550;
+  box-shadow: 0 0 1px #A7BE5D;
 }
 
 #notification_page ul li input:checked + .slider:before {
@@ -511,8 +849,8 @@ https://www.w3schools.com/howto/howto_css_switch.asp
 }
 
 #settings_page #settings li {
-    padding: 10px 0;
-    border-bottom: 2px solid #cfe550;    
+    padding: 5px 0;
+    border-bottom: 2px solid #A7BE5D;    
 }
 
 #settings_page #settings li:last-child {
@@ -552,6 +890,7 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     header.top {
     padding-top: 0px;
     }
+   
     #page_login .login_types a {
     font-size: 1.25em
     }
@@ -565,4 +904,7 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     #settings_page #settings li a img {
     height: 40px;
     margin-top: 15px;
+    }
+    #profile_page main {
+    margin-top: -15px;
     }
