@@ -42,7 +42,6 @@ a {
     text-decoration: none;
 }
 
-
 /*Header voor account setup*/
 
 header.top {
@@ -82,7 +81,6 @@ font-size: 1.5em
     background-color: #A7BE5D;
 }
 
-
 /*Styling voor login page*/
 
 #page_login {
@@ -97,7 +95,21 @@ font-size: 1.5em
     height: calc(100%/3);
 }
 
-#page_login .logo_image {}
+#page_login div.login {
+    display: block;
+position: absolute;
+top: 25px;
+right: 25px;
+}
+
+#page_login div.login a {
+
+font-size: 1.2em;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #A7BE5D;
+    padding: 5px 30px;
+border-radius: 10px;   }
 
 .login_types .login-title {
     font-size: 3em;
@@ -161,6 +173,21 @@ font-size: 1.5em
     font-size: 1.2em;
 }
 
+/*Login page*/
+#Login_page form .saveProfile {
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #A7BE5D;
+  padding: 5px 50px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10vh;
+  width: 80vw;
+  min-width: unset;
+}
+
 
 /*styling voor formulieren*/
 
@@ -192,7 +219,8 @@ form div > input, select {
 }
 
 form input {
-margin-bottom: 5px;}
+margin-bottom: 5px;
+}
 
 .goToNextPage {
     text-align: center;
@@ -215,8 +243,8 @@ margin-bottom: 5px;}
 #setup_page2 .choseConsole {
     display: flex;
 }
+
 #setup_page2 .choseConsole .container{
-/*    position: relative;*/
     flex: 5;
     background-color: #A7BE5D;
     border-radius: 15px;
@@ -242,8 +270,6 @@ margin-bottom: 5px;}
 }
 
 /*setup pagiona 3 */
-
-
 #setup_page3 #searchcontainer {
     overflow: scroll;
     height: 35vh;
@@ -253,7 +279,6 @@ margin-bottom: 5px;}
     border-radius: 10px;
     padding: 10px;
 }
-
 
 #setup_page3 #myInput {
   width: 75vw;
@@ -304,20 +329,6 @@ margin-bottom: 5px;}
     color: black;
 }
 
-
-#setup_page3 .enter {
-/*
-    margin: 40px 69px 100px;
-    left: 0;
-    position: absolute;
-    font-size: 19pt;
-    padding: 20px 20px;
-    box-shadow: 0 5px 5px 0 rgba(68, 68, 68, 0.6);
-    background-color: white;
-    border: 5px solid #cfe550; 
-*/
-}
-
 #setup_page3 #foo {
     font-size: 15pt;
     color: black;
@@ -330,12 +341,6 @@ margin-bottom: 5px;}
     font-family: sans-serif;    
 }
 
-#setup_page3 .enterbutton {
-/*
-    display: flex;
-    justify-content: center;
-*/
-}
 
 #setup_page3 ul {
     list-style: none;
@@ -401,26 +406,33 @@ width: 80vw;}
     background-color: #A7BE5D; 
 }
 
+#home_page .container .listTopGames {
+font-size: 1.25em;}
+
+#home_page .container .listTopGames p {
+    color: #000;
+    font-size: 1.5em;
+}
 
 
-#home_tabbar {
+.tabbar {
     display: flex;
     justify-content: space-around;
     width: 100vw;
     padding: 0;
     position: fixed;
     bottom: 0;
-    margin-bottom: 0;    
+    margin-bottom: 0;  
 }
 
-#home_tabbar li {
+.tabbar li {
     width: calc(100%/3);
     background-color: #A7BE5D;
     border: 3px solid white;
     list-style: none;
 }
 
-#home_tabbar li a img{
+.tabbar li a img{
     height: 40px;
     width: 40px;
     margin-top: 5px;
@@ -428,10 +440,11 @@ width: 80vw;}
     
 }
 
-#home_tabbar li a p {
+.tabbar li a p {
     margin: 0;
     font-size: 12pt;
 }
+
 
 #home_tabbar li:nth-child(2) {
     border-left: 0px;
@@ -440,6 +453,21 @@ width: 80vw;}
 
 #home_tabbar li:first-child {
     background-color: #322244;  
+}
+
+#message_tabbar li:nth-child(2) {
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #322244;
+}
+
+#profile_tabbar li:nth-child(2) {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#profile_tabbar li:last-child {
+    background-color: #322244;
 }
 
 #home_page .loader .loading_circle {
@@ -463,41 +491,6 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 */
 
 /*Message page*/
-#message_tabbar {
-    display: flex;
-    justify-content: space-around;
-    width: 100vw;
-    padding: 0;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 0;    
-}
-
-#message_tabbar li {
-    width: calc(100%/3);
-    background-color: #A7BE5D;
-    border: 3px solid white;
-    list-style: none;
-}
-
-#message_tabbar li a img{
-    height: 40px;
-    width: 40px;
-    margin-top: 5px;
-    margin-bottom: 0px;
-    
-}
-
-#message_tabbar li a p {
-    margin: 0;
-    font-size: 12pt;
-}
-
-#message_tabbar li:nth-child(2) {
-    border-left: 0px;
-    border-right: 0px;
-    background-color: #322244;
-}
 
 #message_page .loader .loading_circle {
     position: absolute;
@@ -574,7 +567,6 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     overflow: scroll;
 }
 
-
 #message_page .up {
     margin: 10px 0;
     display: flex;
@@ -606,7 +598,6 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     border-radius: 10px;
     border: 2px solid #fff;
 }
-
 
 /*Profile Page & Home Page*/
 #profile_page main, #home_page main{
@@ -688,6 +679,35 @@ width: 65px;}
 width: 100px;
 }
 
+#home_page .container .clock {
+    position: relative;
+width: 50px;
+height: 50px;
+border-radius: 100%;
+border: 2px solid #000;}
+
+#home_page .container .clock::before {
+    position: absolute;
+content: "";
+height: 25px;
+width: 1px;
+border: 1px solid #000;
+    background-color: #000;
+left: 50%;
+transform: translate(-50%);}
+
+#home_page .container .clock::after{
+    position: absolute;
+content: "";
+height: 1px;
+width: 15px;
+border: 1px solid #000;
+    background-color: #000;
+    top: 55%;
+left: 70%;
+    transform: translate(-50%,-50%);
+}
+
 /*profile edit page*/
 
 #profile_page_edit main {
@@ -709,9 +729,9 @@ height: 75px;
     border: 2px solid #A7BE5D;
     padding: 5px 50px;
     border-radius: 10px;
-position: absolute;
-bottom: 10vh;
-  width: 80vw;
+    position: absolute;
+    bottom: 10vh;
+    width: 80vw;
     min-width: unset;
 }
 
@@ -722,47 +742,6 @@ bottom: 10vh;
     left: 50%;
     transform: translate(-50%);
     bottom: 15%;
-}
-
-/*tabbar bottom*/
-
-#profile_tabbar {
-    display: flex;
-    justify-content: space-around;
-    width: 100vw;
-    padding: 0;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 0;    
-}
-
-#profile_tabbar li {
-    width: calc(100%/3);
-    background-color: #A7BE5D;
-    border: 3px solid white;
-    list-style: none;
-}
-
-#profile_tabbar li a img{
-    height: 40px;
-    width: 40px;
-    margin-top: 5px;
-    margin-bottom: 0px;
-    
-}
-
-#profile_tabbar li a p {
-    margin: 0;
-    font-size: 12pt;
-}
-
-#profile_tabbar li:nth-child(2) {
-    border-left: 0px;
-    border-right: 0px;
-}
-
-#profile_tabbar li:last-child {
-    background-color: #322244;
 }
 
 #profile_page .loader .loading_circle {
@@ -945,11 +924,6 @@ https://www.w3schools.com/howto/howto_css_switch.asp
 #settings_page .arrowright {
 }
 
-
-
-
-
-
 /* Media querie for mobiles smaller than 350px (iphone 5 and smaller)*/
 @media only screen and (max-width: 350px) {
     header.top {
@@ -978,6 +952,5 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     }
     #message_page #message {
     height: 40vh;
-    }
-    
+    }   
 }
