@@ -11,7 +11,7 @@ function removeLoadingCircle() {
 window.addEventListener('load', (event) =>{
     window.setTimeout(() =>{
 removeLoadingCircle();
-    }, 3000);
+    }, 1500);
 })
 
 

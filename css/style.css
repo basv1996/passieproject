@@ -384,6 +384,7 @@ width: 80vw;}
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 #home_page header img {
@@ -420,18 +421,16 @@ width: 80vw;}
 }
 
 #home_tabbar li a img{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     margin-top: 5px;
     margin-bottom: 0px;
     
 }
 
 #home_tabbar li a p {
-    margin-top: 0;
+    margin: 0;
     font-size: 12pt;
-    margin-top: 0;
-    margin-bottom: 10px;
 }
 
 #home_tabbar li:nth-child(2) {
@@ -440,8 +439,7 @@ width: 80vw;}
 }
 
 #home_tabbar li:first-child {
-    background-color: #322244;
-    
+    background-color: #322244;  
 }
 
 #home_page .loader .loading_circle {
@@ -483,18 +481,16 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 }
 
 #message_tabbar li a img{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     margin-top: 5px;
     margin-bottom: 0px;
     
 }
 
 #message_tabbar li a p {
-    margin-top: 0;
+    margin: 0;
     font-size: 12pt;
-    margin-top: 0;
-    margin-bottom: 10px;
 }
 
 #message_tabbar li:nth-child(2) {
@@ -537,6 +533,80 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     width: calc(40%/3);
     margin-top: 20px;
 }
+
+#message_page #friends {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: scroll; 
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    background-color: #2E2440;
+}
+
+#message_page #friends li {
+    width: calc(100%/4);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#message_page #friends img {
+    width: 50px;
+    margin-bottom: 0;
+}
+
+#message_page #fiends p {
+    text-align: center;
+}
+
+#message_page #message {
+    margin: 10px 20px;
+    padding: 0;
+    height: 42vh;
+    overflow: scroll;
+}
+
+
+#message_page .up {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#message_page .up p {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#message_page #message img {
+    width: 100px;
+    padding: 10px;
+}
+
+#message_page #message a {
+    display: flex;
+    flex-direction: row;
+}
+
+#message_page #message li {
+    list-style: none;
+    background-color: #A7BE5D;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
 
 /*Profile Page & Home Page*/
 #profile_page main, #home_page main{
@@ -645,8 +715,6 @@ bottom: 10vh;
     min-width: unset;
 }
 
-
-
 .goToNextPage {
     text-align: center;
     margin: 0 auto;
@@ -686,10 +754,6 @@ bottom: 10vh;
 #profile_tabbar li a p {
     margin: 0;
     font-size: 12pt;
-/*
-    margin-top: 0;
-    margin-bottom: 10px;
-*/
 }
 
 #profile_tabbar li:nth-child(2) {
@@ -711,6 +775,7 @@ bottom: 10vh;
     border-top: 20px solid #A7BE5D;
     border-radius: 100%;
     animation: spin 2s linear infinite; 
+    z-index: 9;
 }
 
 @keyframes spin {
@@ -908,3 +973,11 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     #profile_page main {
     margin-top: -15px;
     }
+    #message_page #message img {
+    width: 70px;
+    }
+    #message_page #message {
+    height: 40vh;
+    }
+    
+}
