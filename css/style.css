@@ -164,7 +164,7 @@ border-radius: 10px;   }
 }
 
 .login_EM {
-    background-color: #cfe550;
+    background-color: #A7BE5D;
 }
 
 .password_forgot {
@@ -620,9 +620,13 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     list-style: none;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px 10px;
     padding-bottom: 0;
     margin-bottom: 0;
+}
+
+#message_page #friends li p {
+margin: 0.5em 0;
 }
 
 #message_page #friends img {
@@ -637,7 +641,7 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 #message_page #message {
     margin: 10px 20px;
     padding: 0;
-    height: 52vh;
+    height: 58vh;
     overflow: scroll;
 }
 
@@ -1042,7 +1046,7 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     font-size: 1.25em
     }
     #setup_page3 #searchcontainer {  
-    height: 38vh;
+    height: 46vh;
     }
     
     #settings_page #settings li {
@@ -1098,7 +1102,7 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     #message_page #message {
     margin: 10px 20px;
     padding: 0;
-    height: 42vh;
+    height: 48vh;
     overflow: scroll;
     }   
 }
@@ -1112,7 +1116,7 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     #message_page #message {
     margin: 10px 20px;
     padding: 0;
-    height: 47vh;
+    height: 52vh;
     overflow: scroll;
     }    
 }
