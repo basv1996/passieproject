@@ -8,7 +8,7 @@ var consoleImgElement = document.querySelector("#consoleImage");
 var volgendSchermKnop = document.querySelector(".goToNextPage");
 var dobElement = document.querySelector("#DOB");
 
-var consolesImgs = ["Playsstation_controller.png", "Xbox_controller.png", "Nintendo_controller.png", "Computer_controller.png", ];
+var consolesImgs = ["Playstation.png", "XBOX.png", "Nintendo.png", "Desktop.png", ];
 var nameConsole = ["Playstation", "XBOX", "Nintendo", "Desktop"];
 
 var rememberConsole = [];

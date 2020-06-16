@@ -95,6 +95,11 @@ font-size: 1.5em
     height: calc(100%/3);
 }
 
+#page_login .logo_image img {
+      margin-top: 5vh;
+    width: 70vw;
+}
+
 #page_login div.login {
     display: block;
 position: absolute;
@@ -103,7 +108,6 @@ right: 25px;
 }
 
 #page_login div.login a {
-
 font-size: 1.2em;
     color: #000;
     background-color: #fff;
@@ -174,18 +178,33 @@ border-radius: 10px;   }
 }
 
 /*Login page*/
-#Login_page form .saveProfile {
-  margin: 0 auto;
-  font-size: 1.5em;
-  color: #000;
-  background-color: #fff;
-  border: 2px solid #A7BE5D;
-  padding: 5px 50px;
-  border-radius: 10px;
-  position: absolute;
-  bottom: 10vh;
-  width: 80vw;
-  min-width: unset;
+#Login_page form div input.saveProfile {
+    margin: 0 auto;
+    font-size: 1.5em;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #A7BE5D;
+    padding: 5px 50px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10vh;
+    width: 80vw;
+    min-width: unset;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/*Dit is een link die over de login button heen valt*/
+#Login_page a.goToHome {
+    height: 40px;
+     position: absolute;
+    bottom: 10vh;
+    width: 80vw;
+    min-width: unset;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    font-size: 0;
 }
 
 
@@ -247,6 +266,7 @@ margin-bottom: 5px;
 #setup_page2 .choseConsole .container{
     flex: 5;
     background-color: #A7BE5D;
+    border: 2px solid #fff;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -276,6 +296,7 @@ margin-bottom: 5px;
     width: 80vw;
     margin: 0 auto;
     background-color: #A7BE5D;
+     border: 2px solid #fff;
     border-radius: 10px;
     padding: 10px;
 }
@@ -412,8 +433,24 @@ font-size: 1.25em;}
 #home_page .container .listTopGames p {
     color: #000;
     font-size: 1.5em;
+    margin-bottom: 0;
+    margin-top: 0.5em
+}
+ ol.top3Games {
+margin-left: 15%;}
+
+ol.top3Games li {
+    text-align: left;
+    padding: 5px 0
 }
 
+ol.top3Games li img {
+width: 25px;
+margin: 0 10px;
+position: absolute;
+left: 20px;}
+
+/*tabbar bottom page*/
 
 .tabbar {
     display: flex;
@@ -509,6 +546,43 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     100% {transform: rotate(360deg);}
 }
 
+.animationSlideRight {
+    animation: toTheRight .5s linear;
+}
+
+.animationSlideLeft {
+    animation: toTheLeft .5s linear;
+}
+
+/*
+#home_page #home_main {
+    animation: toTheLeft 1s linear ;
+}
+*/
+#home_page #home_main .container .home_profile p, #home_page #home_main .container .available_during p{
+    color: #fff;
+    margin: 0;
+    font-size: 10pt;
+}
+
+@keyframes toTheRight {
+    0% {transform: rotate(0deg); left: 0;}
+    25% {transform: rotate(10deg); left: 25%;}
+    50% {transform: rotate(15deg); left: 50%;}
+    75% {transform: rotate(20deg); left: 75%;}
+    100% {transform: rotate(25deg); left: 100%;}
+    
+}
+
+@keyframes toTheLeft {
+    0% {transform: rotate(0deg); right: 0;}
+    25% {transform: rotate(-10deg); right: 25%;}
+    50% {transform: rotate(-15deg); right: 50%;}
+    75% {transform: rotate(-20deg); right: 75%;}
+    100% {transform: rotate(-25deg); right: 100%;}
+    
+}
+
 #message_page .loader {
     position: absolute;
     top: 0;
@@ -542,7 +616,7 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 }
 
 #message_page #friends li {
-    width: calc(100%/4);
+    width: calc(100%/4.5);
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -563,7 +637,7 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 #message_page #message {
     margin: 10px 20px;
     padding: 0;
-    height: 42vh;
+    height: 52vh;
     overflow: scroll;
 }
 
@@ -598,6 +672,50 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     border-radius: 10px;
     border: 2px solid #fff;
 }
+#single_message_page main {
+     background-color: #A7BE5D;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 15px 5px;
+}
+
+#single_message_page main .title {
+display: flex;
+    width: 50%;
+    margin: 10px auto 10px auto;
+flex-direction: row;
+justify-content: space-between;
+align-content: center;
+}
+
+#single_message_page main .title img{
+width: 50px;
+}
+
+#single_message_page main .messages {
+ border: 2px solid #fff;
+height: 50vh;
+overflow: scroll;
+margin-bottom: 15px;
+}
+
+#single_message_page main  .inputField {
+background-color: #322244;
+padding: 10px;}
+
+#single_message_page main .messages .Message {
+    text-align: left;
+    width: 80%;
+background-color: #bbb;
+border-radius: 15px;
+padding: 5px 15px;}
+
+#single_message_page main .messages .rightMessage {
+text-align: right;
+margin-left: 20%
+}
 
 /*Profile Page & Home Page*/
 #profile_page main, #home_page main{
@@ -607,7 +725,8 @@ https://www.w3schools.com/howto/howto_css_loader.asp
     border: 2px solid #fff;
     border-radius: 15px;
     padding: 10px 15px;
-    position: relative;
+    position: fixed;
+    margin-left: 10%;
 }
 
 #profile_page .container > div, #home_page .container > div  {
@@ -631,40 +750,50 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 }
 
 #profile_page main .profile_image .credentitals {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     text-align: left;
     width: 30vw;
     margin-left: 10px;
 }
 
+#profile_page main .profile_image .credentitals p {
+margin: 5px 0;
+}
+
+#profile_page main .profile_image .credentitals p:last-of-type {
+color: #000;
+font-size: 0.9em;
+font-weight: 700;
+}
+
 #profile_page main .bio_text {
+    color: #000;
     margin: 0;
     text-align: left;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
-#profile_page main .edit p {
-    color: #322244;
+#profile_page main .edit a {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5px 5px 5px 15px;
+    background-color: #322244;
     position: absolute;
-    right: 15px;
-    top: 0;
+    right: 10px;
+    top: 10px;
+    font-size: 1.2em;
+}
+#profile_page main .edit a img {
+width: 20px;
+margin: 0 3px;
 }
 
 #profile_page main .profile_image img {
 width: 100px;
 height: 100px;
-}
-
-#profile_page main .profile_top3 ol img {
-width: 40px;
-height: 40px
-}
-
-#profile_page main > div ol {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-#profile_page main > div ol li {
-    padding-left: 15px;  
 }
 
 /*Home Page*/
@@ -676,36 +805,7 @@ height: 40px
 width: 65px;}
 
 #home_page .container .decline_approve img {
-width: 100px;
-}
-
-#home_page .container .clock {
-    position: relative;
-width: 50px;
-height: 50px;
-border-radius: 100%;
-border: 2px solid #000;}
-
-#home_page .container .clock::before {
-    position: absolute;
-content: "";
-height: 25px;
-width: 1px;
-border: 1px solid #000;
-    background-color: #000;
-left: 50%;
-transform: translate(-50%);}
-
-#home_page .container .clock::after{
-    position: absolute;
-content: "";
-height: 1px;
-width: 15px;
-border: 1px solid #000;
-    background-color: #000;
-    top: 55%;
-left: 70%;
-    transform: translate(-50%,-50%);
+width: 80px;
 }
 
 /*profile edit page*/
@@ -890,10 +990,12 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
 }
 
 #settings_page #settings li {
-    padding: 5px 0;
+    padding: 20px 0;
     border-bottom: 2px solid #A7BE5D;    
 }
 
@@ -926,6 +1028,12 @@ https://www.w3schools.com/howto/howto_css_switch.asp
 
 /* Media querie for mobiles smaller than 350px (iphone 5 and smaller)*/
 @media only screen and (max-width: 350px) {
+    #page_login .logo_image img {
+    width: 60vw;
+    }
+    .login_types .login-title {
+    font-size: 2em;
+    }
     header.top {
     padding-top: 0px;
     }
@@ -947,10 +1055,65 @@ https://www.w3schools.com/howto/howto_css_switch.asp
     #profile_page main {
     margin-top: -15px;
     }
+    #home_page .container .listTopGames p {
+    font-size: 1.3em;
+    margin-top: .3em;
+   }
+    #home_page .container .listTopGames ol {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    }
+    
+    #home_page .container .decline_approve {
+    margin-top: 0;}
+    
+    #home_page .container .decline_approve img {
+    width: 60px;
+}
     #message_page #message img {
     width: 70px;
     }
     #message_page #message {
     height: 40vh;
     }   
+        #settings_page #settings li {
+    padding: 5px 0;
+    border-bottom: 2px solid #A7BE5D;    
 }
+    
+    #message_page #message {
+    margin: 10px 20px;
+    padding: 0;
+    height: 39vh;
+    overflow: scroll;
+}
+}
+
+@media only screen and (height: 667px) {
+    #settings_page #settings li {
+    padding: 10px 0;
+    border-bottom: 2px solid #A7BE5D;
+    }
+    
+    #message_page #message {
+    margin: 10px 20px;
+    padding: 0;
+    height: 42vh;
+    overflow: scroll;
+    }   
+}
+ 
+@media only screen and (height: 736px) {
+    #settings_page #settings li {
+    padding: 15px 0;
+    border-bottom: 2px solid #A7BE5D;
+    }
+    
+    #message_page #message {
+    margin: 10px 20px;
+    padding: 0;
+    height: 47vh;
+    overflow: scroll;
+    }    
+}
+   
